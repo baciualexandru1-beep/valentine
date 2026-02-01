@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine 💖</title>
+
+<style>
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #ffe6f0, #ffffff);
+    font-family: 'Comic Sans MS', cursive;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    color: #ff4d88;
+    margin-top: 40px;
+}
+
+.bear {
+    font-size: 120px;
+    margin: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 22px;
+    border: none;
+    border-radius: 25px;
+}
+
+#yes {
+    background-color: #ff4d88;
+    color: white;
+}
+
+#no {
+    background-color: #cccccc;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+}
+</style>
+</head>
+
+<body>
+
+<h1>Deni, will you be my Valentine? 💖</h1>
+
+<div class="bear">🧸❤️</div>
+
+<button id="yes" onclick="alert('YAY 💕 I love you so much!')">
+    Yes 💘
+</button>
+
+<button id="no">
+    No 💔
+</button>
+
+<script>
+const noBtn = document.getElementById("no");
+
+function moveNo() {
+    const maxX = window.innerWidth - noBtn.offsetWidth;
+    const maxY = window.innerHeight - noBtn.offsetHeight;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+}
+
+// se mișcă NON-STOP 😈
+setInterval(moveNo, 500);
+</script>
+
+</body>
+</html>
